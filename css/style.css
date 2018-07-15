@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+}
+
+.skyLine {
+    height: 84px;
+    background-color: #82D7E8;
+    border-bottom: 2px solid dimgrey;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.buildingsBlock {
+    left: 94%;
+    top: 35px;
+    font-size: 50px;
+    position: absolute;
+}
+
+.buildingsBlock img {
+    width: 50px;
+}
+
+.carBlock {
+    top: 58px;
+    left: 60px;
+    position: absolute;
+    -webkit-transition: left 3s, background-color .5s;
+    -moz-transition: left 3s, background-color .5s;
+    -ms-transition: left 3s, background-color .5s;
+    -o-transition: left 3s, background-color .5s;
+    transition: left 3s, background-color .5s;
+
+    transition-timing-function: ease-in-out;
+}
+
+.carBlock img {
+    width: 80px;
+}
+
+.trafficLightBlock {
+    top: 35px;
+    left: 50%;
+    position: absolute;
+}
+
+.trafficLightBlock img {
+    width: 50px;
+}
+
+.houseBlock {
+    top: 35px;
+    left: 10px;
+    color: #ff6464;
+    font-size: 50px;
+    position: absolute;
+}
+
+.buttonBlockMain {
+    left: 50%;
+    top: 120px;
+    position: absolute;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.buttonBlockMain button {
+    padding: 12px;
+}
