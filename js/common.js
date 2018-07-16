@@ -2,7 +2,7 @@
  * @type {string}
  */
 
-var leftPoint = '60px',
+let leftPoint = '60px',
     rightPoint = '88.5%',
     trafficLeftPoint = '45%',
     trafficRightPoint = '52%',
@@ -54,7 +54,7 @@ function slideSquare(elem) {
 
 function moveToTrafficFromLeft(elem) {
 
-    var clAddArray = ['atTraffic', 'fromLeft'];
+    let clAddArray = ['atTraffic', 'fromLeft'];
 
     elem.classList.remove('atLeft');
     addClassesToElements(clAddArray, elem);
@@ -68,7 +68,7 @@ function moveToTrafficFromLeft(elem) {
 
 function moveToRightFromTraffic(elem) {
 
-    var clAddArray = ['atRight'];
+    let clAddArray = ['atRight'];
 
     elem.classList.remove('atTraffic', 'fromLeft');
 
@@ -88,7 +88,7 @@ function moveToRightFromTraffic(elem) {
 
 function moveToTrafficFromRight(elem) {
 
-    var clAddArray = ['atTraffic', 'fromRight'];
+    let clAddArray = ['atTraffic', 'fromRight'];
 
     elem.classList.remove('atRight');
 
@@ -104,7 +104,7 @@ function moveToTrafficFromRight(elem) {
 
 function moveToLeftFromTraffic(elem) {
 
-    var clAddArray = ['atLeft'];
+    let clAddArray = ['atLeft'];
 
     elem.classList.remove('atTraffic', 'fromRight');
 
