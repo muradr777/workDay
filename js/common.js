@@ -1,13 +1,10 @@
+'use strict';
+
 /**
  * @type {string}
  */
 
-let leftPoint = '60px',
-    rightPoint = '88.5%',
-    trafficLeftPoint = '45%',
-    trafficRightPoint = '52%',
-    carMorning = 'img/sedan-512.png',
-    carNight = 'img/sedan-512-night.png',
+let position = ['75px', '45%', '52%', '90%'],
     carImg = document.querySelector('.carBlock img'),
     skyBlock = document.querySelector('.skyLine'),
     toggleBtn = document.querySelector('.toggleBtn'),
@@ -58,7 +55,7 @@ function moveToTrafficFromLeft(elem) {
 
     elem.classList.remove('atLeft');
     addClassesToElements(clAddArray, elem);
-    carBlock.style.left = trafficLeftPoint;
+    carBlock.style.left = position[1];
 
 }
 
@@ -74,7 +71,7 @@ function moveToRightFromTraffic(elem) {
 
     addClassesToElements(clAddArray, elem);
 
-    carBlock.style.left = rightPoint;
+    carBlock.style.left = position[3];
 
     setTimeout(function() {
         carBlock.style.transform = 'rotateY(-180deg)';
@@ -94,7 +91,7 @@ function moveToTrafficFromRight(elem) {
 
     addClassesToElements(clAddArray, elem);
 
-    carBlock.style.left = trafficRightPoint;
+    carBlock.style.left = position[2];
 
 }
 
@@ -110,7 +107,7 @@ function moveToLeftFromTraffic(elem) {
 
     addClassesToElements(clAddArray, elem);
 
-    carBlock.style.left = leftPoint;
+    carBlock.style.left = position[0];
 
     setTimeout(function() {
         carBlock.style.transform = 'rotateY(0)';
@@ -138,8 +135,7 @@ function addClassesToElements(arrayClasses, element) {
  */
 
 function changeToMorning() {
-    carImg.setAttribute("src", carMorning);
-    skyBlock.style.backgroundColor = '#82D7E8';
+    skyBlock.classList.remove('dark');
 }
 
 /**
@@ -147,6 +143,5 @@ function changeToMorning() {
  */
 
 function changeToNight() {
-    carImg.setAttribute("src", carNight);
-    skyBlock.style.backgroundColor = '#000888';
+    skyBlock.classList.add('dark');
 }
